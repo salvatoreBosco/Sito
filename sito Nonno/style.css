@@ -1,0 +1,1007 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.hidden{
+    display: none;
+}
+
+.div-admin{
+    display: none;
+}
+
+/*VISUALIZZAZIONE schermi grandi*/
+
+@media (min-width: 1200px) {
+
+    a:hover {
+        font-size: larger;
+    }
+    
+    .div-admin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 66px;
+        height: 44px;
+        position: absolute;
+        top: 4%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(150, 150, 150);
+        border: 1px solid black;
+        border-radius: 50%;
+        z-index: 99;
+    }
+    .admin{
+        font-size: 20px;
+        
+    }
+
+    header{
+        height: 60px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        opacity: 0.7;
+    }
+    
+    
+    .menu {
+        width: 100vw;
+        height: 40px;
+        
+        margin-top: 20px;
+    }
+    
+    .menu-elements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style-type: none;
+    
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .menu-elements>li {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    
+    #home{
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    
+    .img-bkgd{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(img/pittore+quadro.jpg);
+        background-repeat: no-repeat;
+        background-position: 10%;
+        background-size: cover;
+        opacity: 0.8;
+    }
+    
+    .nome{
+        width: fit-content;
+        font-size: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .payoff{
+        width: fit-content;
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        transform: translate(-50%, 50%);
+    }
+    
+    #mostra{
+        height: 100vh;
+        position: relative;
+        background-image: url(img/stanza-vuota.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .cerca-opere{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: blue;
+    }
+    
+    .btn-left{
+        font-size: 30px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translate(-50%, -50%);
+        background-color: inherit;
+        border: 1px solid brown;
+    
+    }
+    
+    .btn-right{
+        font-size: 30px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translate(0%, -50%);
+        background-color: inherit;
+        border: 1px solid brown;
+    
+    }
+    
+    .btn-left:hover, .btn-right:hover{
+        font-size: 40px;
+    }
+    
+    .opere{
+        width: 100vw;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .opera{
+        width: 150px;
+        height: 150px;
+        border: 5px solid brown;
+        background-color: inherit;
+        top: 50%;
+    }
+    
+    .opera:hover{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .center{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .left{
+        position: absolute;
+        left: 22%;
+        transform: translate(0%, -50%);
+        background-image: url(img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.27\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .right{
+        position: absolute;
+        right: 22%;
+        transform: translate(0%, -50%);
+        background-image: url(img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.28\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .more-opere{
+        background-color: inherit;
+        position: relative;
+        left: 80%;
+    }
+    
+    .more-opere:hover{
+        font-size: larger;
+    }
+    
+    .focus{
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .focus-opere{
+        height: 100%;
+        width: 100%;
+        background-color: whitesmoke;
+        opacity: 0.85;
+    }
+    
+    .focus-opera-img{
+        width: 500px;
+        height: 500px;
+        background-color: inherit;
+        background-image: url(/img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.26\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translate(0, -50%);
+    }
+    
+    .focus-opera-descrizione{
+        width: 500px;
+        height: 500px;
+    
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translate(0, -50%);
+    }
+    
+    .nome-opera{
+        font-size: 30px;
+    }
+    .tecnica{
+        margin-top: 10px;
+    }
+    .caratteristiche{
+        margin-top: 5px;
+    }
+    .descrizione{
+        margin-top: 10px;
+    }
+    
+    .anno{
+    margin-top: 10px;
+    }
+    
+    .exit{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 30px;
+        background-color: inherit;
+        border: 0;
+    }
+    
+    .exit:hover{
+        font-size: 40px;
+    }
+    
+    #chi-sono{
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .storia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-biografia{
+        font-size: 30px;
+    }
+
+    .biografia{
+        margin-top: 10px;
+    }
+    
+    
+    #contatti{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img-bkgd2{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(img/pittore+quadro.jpg);
+        background-repeat: no-repeat;
+        background-position: 10%;
+        background-size: cover;
+        opacity: 0.4;
+    }
+    
+    
+    .info-contatti{
+        height: fit-content;
+        width: fit-content;
+        font-size: 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .info-contatti > div{
+        margin-top: 30px;
+    }
+    
+    footer{
+        width: 100vw;
+        margin-top: 50px;
+        background-color: whitesmoke;
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    
+    
+
+}
+/*VISUALIZZAZIONE DA LAPTOP*/
+@media (max-width: 1200px) {
+
+    
+    a:hover {
+        font-size: larger;
+    }
+    
+    header{
+        height: 60px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        opacity: 0.7;
+    }
+    
+    
+    .menu {
+        width: 100vw;
+        height: 40px;
+        
+        margin-top: 20px;
+    }
+    
+    .menu-elements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style-type: none;
+    
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .menu-elements>li {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    
+    #home{
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    
+    .img-bkgd{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(img/pittore+quadro.jpg);
+        background-repeat: no-repeat;
+        background-position: 10%;
+        background-size: cover;
+        opacity: 0.8;
+    }
+    
+    .nome{
+        width: fit-content;
+        font-size: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .payoff{
+        width: fit-content;
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        transform: translate(-50%, 50%);
+    }
+    
+    #mostra{
+        height: 100vh;
+        position: relative;
+        background-image: url(img/stanza-vuota.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    
+    .cerca-opere{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+    }
+    
+    .btn-left{
+        font-size: 30px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translate(-50%, -50%);
+        background-color: inherit;
+        border: 1px solid brown;
+    
+    }
+    
+    .btn-right{
+        font-size: 30px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translate(0%, -50%);
+        background-color: inherit;
+        border: 1px solid brown;
+    
+    }
+    
+    .btn-left:hover, .btn-right:hover{
+        font-size: 40px;
+    }
+    
+    .opere{
+        width: 100vw;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .opera{
+        width: 150px;
+        height: 150px;
+        border: 5px solid brown;
+        background-color: inherit;
+        top: 50%;
+    }
+    
+    .opera:hover{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .center{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .left{
+        position: absolute;
+        left: 22%;
+        transform: translate(0%, -50%);
+        background-image: url(img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.27\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .right{
+        position: absolute;
+        right: 22%;
+        transform: translate(0%, -50%);
+        background-image: url(img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.28\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .more-opere{
+        background-color: inherit;
+        position: relative;
+        left: 80%;
+    }
+    
+    .more-opere:hover{
+        font-size: larger;
+    }
+    
+    .focus{
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .focus-opere{
+        height: 100%;
+        width: 100%;
+        background-color: whitesmoke;
+        opacity: 0.85;
+    }
+    
+    .focus-opera-img{
+        width: 500px;
+        height: 500px;
+        background-color: inherit;
+        background-image: url(/img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.26\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translate(0, -50%);
+    }
+    
+    .focus-opera-descrizione{
+        width: 500px;
+        height: 500px;
+    
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translate(0, -50%);
+    }
+    
+    .nome-opera{
+        font-size: 30px;
+    }
+    .tecnica{
+        margin-top: 10px;
+    }
+    .caratteristiche{
+        margin-top: 5px;
+    }
+    .descrizione{
+        margin-top: 10px;
+    }
+    
+    .anno{
+    margin-top: 10px;
+    }
+    
+    .exit{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 30px;
+        background-color: inherit;
+        border: 0;
+    }
+    
+    .exit:hover{
+        font-size: 40px;
+    }
+    
+    #chi-sono{
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .storia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-biografia{
+        font-size: 30px;
+    }
+
+    .biografia{
+        margin-top: 10px;
+    }
+    
+    
+    #contatti{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img-bkgd2{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(img/pittore+quadro.jpg);
+        background-repeat: no-repeat;
+        background-position: 10%;
+        background-size: cover;
+        opacity: 0.4;
+    }
+    
+    
+    .info-contatti{
+        height: fit-content;
+        width: fit-content;
+        font-size: 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .info-contatti > div{
+        margin-top: 30px;
+    }
+    
+    footer{
+        width: 100vw;
+        margin-top: 50px;
+        background-color: whitesmoke;
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    
+}
+
+
+/*VISUALIZZAZIONE DA TABLET*/
+@media (max-width: 980px) { 
+
+
+}
+
+
+
+/*VISUALIZZAZIONE DA MOBILE ORIZZONTALE*/
+@media (max-width: 767px) {
+
+   
+
+}
+
+
+
+
+/*VISUALIZZAZIONE DA MOBILE VERTICALE*/
+@media (max-width: 480px) {
+
+    header{
+        height: 60px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        opacity: 0.7;
+    }
+    
+    
+    .menu {
+        width: 100vw;
+        height: 40px;
+        
+        margin-top: 20px;
+    }
+    
+    .menu-elements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style-type: none;
+    
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .menu-elements>li {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    li{
+        width: max-content;
+    }
+    
+    #home{
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    
+    .img-bkgd{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(img/pittore+quadro.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.5;
+    }
+    
+    .nome{
+        width: fit-content;
+        font-size: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .payoff{
+        width: fit-content;
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, 50%);
+    }
+    
+    #mostra{
+        height: 40vh;
+        position: relative;
+        background-image: url(img/stanza-vuota.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 125%;
+    }
+    
+    .btn-left{
+        font-size: 30px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translate(0%, -50%);
+        background-color: inherit;
+        border: 1px solid brown;
+    
+    }
+    
+    .btn-right{
+        font-size: 30px;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translate(0%, -50%);
+        background-color: inherit;
+        border: 1px solid brown;
+    
+    }
+    
+    .btn-left:hover, .btn-right:hover{
+        font-size: 40px;
+    }
+    
+    .opere{
+        width: 100vw;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .opera{
+        width: 100px;
+        height: 100px;
+        border: 5px solid brown;
+        background-color: inherit;
+        top: 50%;
+    }
+    
+    .opera:hover{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .center{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .more-opere{
+        background-color: inherit;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .more-opere:hover{
+        font-size: larger;
+    }
+    
+    .focus{
+        height: 250%;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .focus-opere{
+        height: 100%;
+        width: 100%;
+        background-color: whitesmoke;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .content{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .focus-opera-img{
+        width: 250px;
+        height: 250px;
+        background-image: url(/img/opere/WhatsApp\ Image\ 2022-08-01\ at\ 6.14.26\ PM.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 5px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .focus-opera-descrizione{
+        width: 95%;
+        
+        margin-top: 10px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .nome-opera{
+        font-size: 30px;
+    }
+    .tecnica{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .caratteristiche{
+        margin-top: 10px;
+    }
+    .descrizione{
+        font-size: 18;
+        margin-top: 10px;
+    }
+    
+    .anno{
+    margin-top: 10px;
+    }
+    
+    .exit{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 30px;
+        background-color: inherit;
+        border: 0;
+        z-index: 99;
+    }
+    
+    .exit:hover{
+        font-size: 40px;
+    }
+    
+    #chi-sono{
+        width: 100vw;
+        height: fit-content;
+    }
+
+    .title-biografia{
+        font-size: 30px;
+    }
+
+    .biografia{
+        margin-top: 15px;
+    }
+    
+    #contatti{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img-bkgd2{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(img/pittore+quadro.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.5;
+    }
+    
+    
+    .info-contatti{
+        height: fit-content;
+        width: fit-content;
+        font-size: 18px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .info-contatti > div{
+        margin-top: 30px;
+        width: max-content;
+    }
+    
+    footer{
+        width: 100vw;
+        margin-top: 50px;
+        background-color: whitesmoke;
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+}

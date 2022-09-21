@@ -1,0 +1,148 @@
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvo Pittore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="div-admin">
+        <a class="admin" href="/admin/login.html"">admin</a>
+    </div>
+    <header>
+        <img src=" #" alt="" class="logo">
+            <div class="menu">
+                <ul class="menu-elements">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#mostra">Opere</a></li>
+                    <li><a href="#chi-sono">Chi sono</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </div>
+
+            </header>
+
+            <section id="home">
+                <br>
+                <div class="img-bkgd"></div>
+                <div class="nome">Salvatore Bosco</div>
+                <div class="payoff">Il miglior pittore al mondo</div>
+            </section>
+
+            <section id="mostra">
+                <br>
+                <div class="cerca-opere">
+                    <input type="search" name="input-cercaOpere" id="input-cerca-opere" placeholder="Cerca un'opera">
+                    <select name="selectFilter" id="select-filter">
+                        <option value="none">Filtra per:</option>
+                        <option value="nome">Nome</option>
+                        <option value="tecnica">Tecnica</option>
+                        <option value="caratteristiche">Dimensioni</option>
+                        <option value="descrizione">Descrizione</option>
+                        <option value="anno">Anno</option>
+                        <option value="categoria">Categoria</option>
+                    </select>
+                    <button type="submit" id="bt-cerca-opere" onclick="cercaOpere()">Cerca</button>
+                </div>
+                <button class="btn-left" onclick="scorri(1)"> &larr; </button>
+                <div class="opere">
+                    <img class="opera center" onclick="details()"></img>
+                </div>
+                <button class="btn-right" onclick="scorri(0)"> &rarr; </button>
+
+                <button class="more-opere"><strong><a href="/sito Nonno/gallery.html">scopri l'intera
+                            galleria</a></strong></button>
+
+                <div class="focus hidden">
+                    <div class="focus-opere"></div>
+                    <button class="exit" onclick="closeFocus()">x</button>
+                    <div class="content">
+                        <div class="focus-opera-img"></div>
+                        <div class="focus-opera-descrizione">
+                            <div class="nome-opera">A lei</div>
+                            <div class="tecnica">Olio su tela</div>
+                            <div class="caratteristiche">96x60 cm</div>
+                            <div class="descrizione">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+                                ipsam iusto
+                                sapiente, porro inventore aspernatur officiis nobis, maxime tenetur odio sed possimus
+                                ullam nem
+                                mollitia quia laudantium ipsum unde velit.</div>
+                            <div class="anno">2022</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="chi-sono">
+                <div class="storia">
+
+                    <div class="title-biografia">Biografia</div>
+                    <div class="biografia">
+                        Nato a Siracusa nel 1942, è un pittore con un talento unico. <br> <br>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quos <br>
+                        blanditiis nesciunt optio, dolore totam a laboriosam. Odio dicta voluptatibus <br>
+                        praesentium sint asperiores expedita laborum similique nihil temporibus? Eum, facilis. <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quos <br>
+                        blanditiis nesciunt optio, dolore totam a laboriosam. Odio dicta voluptatibus <br>
+                        praesentium sint asperiores expedita laborum similique nihil temporibus? Eum, facilis. <br> <br>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quos <br>
+                        blanditiis nesciunt optio, dolore totam a laboriosam. Odio dicta voluptatibus <br>
+                        praesentium sint asperiores expedita laborum similique nihil temporibus? Eum, facilis. <br><br>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quos <br>
+                        blanditiis nesciunt optio, dolore totam a laboriosam. Odio dicta voluptatibus <br>
+                        praesentium sint asperiores expedita laborum similique nihil temporibus? Eum, facilis. <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quos <br>
+                        blanditiis nesciunt optio, dolore totam a laboriosam. Odio dicta voluptatibus <br>
+                        praesentium sint asperiores expedita laborum similique nihil temporibus? Eum, facilis. <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quos <br>
+                        blanditiis nesciunt optio, dolore totam a laboriosam. Odio dicta voluptatibus <br>
+                        praesentium sint asperiores expedita laborum similique nihil temporibus? Eum, facilis. <br><br>
+
+                        Tra i suoi quadri possiamo trovare splendite figure femminili, <br>
+                        nature morte che sembrano fotografie e paesaggi mozzafiato <br>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+            <section id="contatti">
+                <div class="img-bkgd2"></div>
+                <div class="info-contatti">
+                    Per maggiori informazioni scrivete pure su questi contatti:
+                    <br>
+                    <div class="telefono">
+                        <label for="telefono">Numero di telefono:</label>
+                        <a href="tel:+393279473937">+39 327 947 3937</a>
+                    </div>
+                    <div class="mail">
+                        <label for="e-mail">e-mail:</label>
+                        <a href="mailto:salvo.bosco.marcello@gmail.com">salvo.bosco.marcello@gmail.com</a>
+                    </div>
+                    <div class="social">
+                        <label for="facebook">facebook:</label>
+                        <a href="https://www.facebook.com/salvo.bosco.9">salvo.bosco.marcello@gmail.com</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer>
+                sito realizzato da <a href="https://github.com/salvatoreBosco">Salvatore Bosco</a> @copyright 2022
+            </footer>
+
+            <script src="script/script.js"></script>
+</body>
+
+</html>
